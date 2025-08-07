@@ -1,0 +1,83 @@
+[
+  {
+    "name": "United States",
+    "type": "approximate",
+    "city": "New York",
+    "region": "New York",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "strategic_value": "Tech hub, financial center, media capital"
+  },
+  {
+    "name": "United Kingdom",
+    "type": "approximate", 
+    "city": "London",
+    "region": "England",
+    "country": "United Kingdom",
+    "timezone": "Europe/London",
+    "strategic_value": "Financial center, Brexit insights, European gateway"
+  },
+  {
+    "name": "Germany",
+    "type": "approximate",
+    "city": "Berlin",
+    "region": "Berlin",
+    "country": "Germany", 
+    "timezone": "Europe/Berlin",
+    "strategic_value": "EU powerhouse, industrial leader, tech innovation"
+  },
+  {
+    "name": "Italy",
+    "type": "approximate",
+    "city": "Rome",
+    "region": "Lazio",
+    "country": "Italy",
+    "timezone": "Europe/Rome",
+    "strategic_value": "Mediterranean hub, luxury brands, cultural heritage"
+  },
+  {
+    "name": "France",
+    "type": "approximate",
+    "city": "Paris",
+    "region": "Île-de-France",
+    "country": "France",
+    "timezone": "Europe/Paris",
+    "strategic_value": "Luxury market, nuclear energy, agricultural leader"
+  },
+  {
+    "name": "Spain",
+    "type": "approximate",
+    "city": "Madrid",
+    "region": "Madrid",
+    "country": "Spain",
+    "timezone": "Europe/Madrid",
+    "strategic_value": "Latin America gateway, renewable energy, tourism"
+  },
+  {
+    "name": "China",
+    "type": "approximate",
+    "city": "Shanghai",
+    "region": "Shanghai",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "strategic_value": "Manufacturing hub, tech innovation, global trade"
+  },
+  {
+    "name": "Australia",
+    "type": "approximate",
+    "city": "Sydney",
+    "region": "New South Wales", 
+    "country": "Australia",
+    "timezone": "Australia/Sydney",
+    "strategic_value": "Asia-Pacific gateway, mining resources, tech sector"
+  },
+  {
+    "name": "Japan",
+    "type": "approximate",
+    "city": "Tokyo",
+    "region": "Tokyo",
+    "country": "Japan",
+    "timezone": "Asia/Tokyo",
+    "strategic_value": "Tech innovation, robotics, financial markets"
+  }
+]

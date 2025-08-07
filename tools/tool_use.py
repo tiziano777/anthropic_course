@@ -1,6 +1,9 @@
 import json
 from tools.datetime_tool import get_current_datetime
 from tools.batch_tool import run_batch
+from tools.TextEditorTool import TextEditorTool
+
+text_editor_tool = TextEditorTool()
 
 def run_tool(tool_name, tool_input):
     # list of available Tools to run 
@@ -8,6 +11,32 @@ def run_tool(tool_name, tool_input):
         return get_current_datetime(**tool_input)
     elif tool_name == "batch_tool":
         return run_batch(**tool_input)
+    elif tool_name == "str_replace_editor":
+        command = tool_input["command"]
+        if command == "view":
+            return text_editor_tool.view(
+                tool_input["path"], tool_input.get("view_range")
+            )
+        elif command == "str_replace":
+            return text_editor_tool.str_replace(
+                tool_input["path"], tool_input["old_str"], tool_input["new_str"]
+            )
+        elif command == "create":
+            return text_editor_tool.create(
+                tool_input["path"], tool_input["file_text"]
+            )
+        elif command == "insert":
+            return text_editor_tool.insert(
+                tool_input["path"],
+                tool_input["insert_line"],
+                tool_input["new_str"],
+            )
+        elif command == "undo_edit":
+            return text_editor_tool.undo_edit(tool_input["path"])
+        else:
+            raise Exception(f"Unknown text editor command: {command}")
+    else:
+        raise Exception(f"Unknown tool name: {tool_name}")
     '''
     elif tool_name == "another_tool":
         return another_tool(**tool_input)

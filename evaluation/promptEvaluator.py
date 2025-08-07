@@ -1,6 +1,10 @@
 import json
 import concurrent.futures
 import re
+import logging
+
+logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
+
 from textwrap import dedent
 from statistics import mean
 from chat_template.chat_functions import chat, add_assistant_message, add_user_message

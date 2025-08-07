@@ -1,4 +1,5 @@
 ### Building Your First Tool Function
+
 Let's create a function to get the current date and time. This function will accept a date format parameter so Claude can request the time in different formats:
 
 ```python
@@ -63,7 +64,7 @@ When Claude decides to use tool, it returns an assistant message with multiple b
 A multi-block message typically contains:
 
 - Text Block - Human-readable text explaining what Claude is doing (like "I can help you find out the current time. Let me find that information for you")
-- ToolUse Block - Instructions for your code about which tool to call and what parameters to use
+- ToolUse Blocks - Instructions for your code about which tool to call and what parameters to use
 
 The ToolUse block includes:
 
@@ -85,7 +86,7 @@ Each step requires careful handling of the message structure to ensure Claude ha
 ### Complete Workflow
 The complete multi-turn conversation works like this:
 
-- Send user message to Claude with available tools
+- Send user message to Claude with available tools ( paired function + function_schema )
 - Claude responds with text and/or tool requests
 - Execute all requested tools and create result blocks
 - Send tool results back as a user message

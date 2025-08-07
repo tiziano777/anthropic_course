@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from anthropic import Anthropic
-from chat_template.chat_functions import chat,add_assistant_message,add_user_message
+from chat_template.chat_functions import chat, add_assistant_message, add_user_message
 from evaluation.model_grader import grade_by_model
 from evaluation.syntax_grader import grade_syntax
 
@@ -21,7 +21,7 @@ def run_prompt(model, client, test_case):
     
     messages = []
     add_user_message(messages, prompt)
-    output = chat(model,client, messages)
+    output = chat(model, client, messages)
     return output
 
 def run_test_case(model, client, test_case):
@@ -58,12 +58,12 @@ def run_test_case(model, client, test_case):
         "weaknesses": weaknesses
     }
 
-def run_eval(modl,client,dataset):
-    """Loads the dataset and calls run_test_case with each case"""
+def run_eval(model, client, dataset):
+    """Loads the dataset and calls (run_test_case) -> (run_prompt) for each case"""
     results = []
     
     for test_case in dataset:
-        result = run_test_case(model,client,test_case)
+        result = run_test_case(model, client, test_case)
         results.append(result)
     
     # Evaluate prompt results
@@ -101,10 +101,10 @@ Example output:
 Please generate 3 objects.
 """
 
-dataset = generate_dataset(client,model, gen_dataset_prompt)
+dataset = generate_dataset(client, model, gen_dataset_prompt)
 with open("dataset.json", "w") as f:
     json.dump(dataset, f, indent=2)
 
 # results have keys: (output, test_case, score)
-results = run_eval(model,client,dataset)
+results = run_eval(model, client, dataset)
 print(json.dumps(results, indent=2))
