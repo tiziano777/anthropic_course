@@ -6,11 +6,14 @@ from tools.TextEditorTool import TextEditorTool
 text_editor_tool = TextEditorTool()
 
 def run_tool(tool_name, tool_input):
+    
     # list of available Tools to run 
     if tool_name == "get_current_datetime":
         return get_current_datetime(**tool_input)
+    
     elif tool_name == "batch_tool":
         return run_batch(**tool_input)
+    
     elif tool_name == "str_replace_editor":
         command = tool_input["command"]
         if command == "view":
