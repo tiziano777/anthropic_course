@@ -1,6 +1,12 @@
 # Web Search Tool
 
-Modify the JSON conf files in "tools/web_search_tool" folder to configure schama domains and localizations, then call:
+## Main Differenes from other Tools:
+
+The web search tool don't require any type of implementation, it is entirely performed by claude, so we have only to defien schema and pass it to the available tool schema list.
+
+## How to use
+
+Modify the JSON config files in "tools/web_search_tool" folder to configure schema domains and localizations, then call:
 
 ```python
 web_search_tool = WebSearchTool()

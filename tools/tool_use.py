@@ -46,7 +46,6 @@ def run_tool(tool_name, tool_input):
     # Add more tools as needed
     # '''
 
-
 def run_tools(message):
     #Input calls
     tool_requests = [

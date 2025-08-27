@@ -14,7 +14,3 @@ messages = []
 add_user_message(messages, "Is tea or coffee better at breakfast?")
 add_assistant_message(messages, "Coffee is better because")
 answer = text_from_message(chat(model, client, messages))
-
-
-### Stop Sequences
-

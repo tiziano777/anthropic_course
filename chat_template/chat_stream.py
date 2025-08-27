@@ -101,7 +101,7 @@ def chat_stream(
 
     return client.beta.messages.stream(**params)
 
-# Run conversation
+# Run conversation EXAMPLE
 def run_conversation(messages, tools=[], tool_choice=None, fine_grained=False):
     while True:
         with chat_stream(
